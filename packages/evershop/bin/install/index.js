@@ -117,7 +117,8 @@ async function install() {
       process.exit(0);
     }
   }
-
+  // now check if the table exists. otherwise create it.
+  
   // Check postgres database version
   try {
     const { rows } = await execute(pool, `SHOW SERVER_VERSION;`);
